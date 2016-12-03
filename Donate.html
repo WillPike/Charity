@@ -11,19 +11,140 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+	<script type="text/javascript">
+		// Thank you alert
+		function thankYou() {
+			alert("Thank you for your donation!");
+		}
+	</script>
+	<style type="text/css">
+		body {
+		  padding-top: 40px;
+		  padding-bottom: 40px;
+		  background-color: #eee;
+		}
+
+		.form-signin {
+		  max-width: 600px;
+		  padding: 15px;
+		  margin: 0 auto;
+		}
+		.form-signin .form-signin-heading,
+		.form-signin .checkbox {
+		  margin-bottom: 10px;
+		}
+		.form-signin .checkbox {
+		  font-weight: normal;
+		}
+		.form-signin .form-control {
+		  position: relative;
+		  height: auto;
+		  -webkit-box-sizing: border-box;
+		     -moz-box-sizing: border-box;
+		          box-sizing: border-box;
+		  padding: 10px;
+		  font-size: 16px;
+		}
+		.form-signin .form-control:focus {
+		  z-index: 2;
+		}
+		.form-signin input[type="email"] {
+		  margin-bottom: -1px;
+		  border-bottom-right-radius: 0;
+		  border-bottom-left-radius: 0;
+		}
+		.form-signin input[type="password"] {
+		  margin-bottom: 10px;
+		  border-top-left-radius: 0;
+		  border-top-right-radius: 0;
+		}
+		#inputSuccess.form-control:focus {
+		  border-color: #2caa2e;
+		  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 170, 46, 0.6);
+		}
+
+	</style>
+
 </head>
 <body>
 	<header>
-		
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="https://www.charities.org/">American Charities</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="innactive"><a href="index.html">About Us</a></li>
+		        <li class="active"><a href="Donate.html">Donate</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><img src="img/logo2.png"></li>
+		        
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
 	</header>
-	<div class="content">
-		<div class="title">
-			<div class="formContainer">
-				<form>
+		<div class="content">
+			<div class="title">
+				<div class="formContainer">
 					
-				</form>
+	    			<div class="container">
+
+	      				<form class="form-signin">
+	        				<h2 class="form-signin-heading">Donate to the Hunger Relief Cause Fund!</h2>
+	        				<h5> Enter your donation amount below:</h5>
+	        				<label for="inputSuccess" class="sr-only">Donation amount</label>
+				        	<input type="text" class="form-control bfh-number" value="5" max="1000000" step="5" id="inputSuccess" placeholder="$ Donation Amount" autofocus>
+	        				<label for="inputFName" class="sr-only">First name</label>
+	        				<input type="text" id="inputFName" class="form-control" placeholder="First name" required>
+	        				<label for="inputLName" class="sr-only">Last name</label>
+	        				<input type="text" id="inputFName" class="form-control" placeholder="Last name" required>
+	        				<label for="inputAddress" class="sr-only">Address</label>
+	        				<input type="text" id="inputAddress" class="form-control" placeholder="Address" required>
+	        				<label for="inputCard" class="sr-only">Card #</label>
+	        				<input type="text" id="inputCard" class="form-control" placeholder="Credit Card #" required>
+	        				<div class="form-group">
+							  <label for="sel1">Card Type:</label>
+							  <select class="form-control" id="sel1">
+							    <option>Visa</option>
+							    <option>Mastercard</option>
+							    <option>American Express</option>
+							    <option>Discover</option>
+							  </select>
+							</div>
+				        	<div class="form-group">
+							  <label for="sel1">How did you hear about us?:</label>
+							  <select class="form-control" id="sel1">
+							    <option>Radio ad</option>
+							    <option>TV ad</option>
+							    <option>Print ad</option>
+							    <option>Web ad</option>
+							    <option>From a friend</option>
+							    <option>Not sure</option>
+							  </select>
+							</div>
+	        				<button class="btn btn-lg btn-primary btn-block" onclick="thankYou()" type="submit">Donate!</button>
+	      				</form>
+
+	    			</div> <!-- /container -->
+
+
+	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    			<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+				</div>
 			</div>
 		</div>
-	</div>
 </body>
 </html>

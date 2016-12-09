@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+	<script src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -41,19 +41,65 @@
 			width: 700px;
 			border-radius: 30px;
 		}
-<<<<<<< HEAD
-		
-=======
+
 		.content {
 			padding-top: 60px;
->>>>>>> origin/master
 		}
-	</style>	
+		.area {
+			width: 200px;
+			height: 95px;
+    		margin: 0;
+		    padding: 0;
+		    border: 0;
+		    font-size: 100%;
+		    font: inherit;
+		    vertical-align: baseline;
+		}
+		.box {
+			width: 32px;
+			height: 32px;
+			background-color: #c3c3c3;
+		}
+	</style>
+	
 </head>
 <body>
 	<!-- https://www.charities.org/funds/hunger -->
-
+	<script type="text/javascript">
+		/*$("body").click(function(){
+			$( "body" ).animate({
+		    opacity: 0,
+		    left: "+=50",
+		    height: "toggle"
+		  }, 500, function() {
+		    // Animation complete.
+		  });
+		});
+		$("body").click(function(){
+			$( "body" ).animate({
+		    opacity: 1,
+		    left: "+=50",
+		    height: "toggle"
+		  }, 500, function() {
+		    // Animation complete.
+		  });
+		});*/
+	</script>	
+	<script type="text/javascript">
+		$('.box').transition({
+		 	rotate: '45deg' 
+		 });
+	</script>
 	<header>
+		<script>
+			$( document ).on( "mousemove", function( event ) {
+			  if(event.pageY < 60) {
+			  	$("header").fadeIn(500);
+			  }
+			});
+		</script>
+	
+	
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -82,6 +128,12 @@
 		</nav>
 	</header>
 	<div class="content">
+	<script type="text/javascript">
+		$( ".content" ).hover(function() {
+  			$( "header" ).fadeOut( 500 );
+		});
+	</script>
+
 		<h1> HUNGER RELIEF CAUSE FUND </h1>
 		<img src="pexels-photo-106343.jpg">
 		<p>
@@ -99,6 +151,9 @@
 		
 		<h3> Give now to change lives. Give once, support many
 		</h3>
+	</div>
+	<div class="area">
+		<div class="box"></div>
 	</div>
 </body>
 </html>

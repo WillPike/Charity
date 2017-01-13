@@ -49,6 +49,15 @@
 		}
 	</style>
 
+	<script type="text/javascript">
+		var cooky = document.cookie;
+		console.log(cooky);
+		if (cooky) {
+			alert("You've been here before! Welcome back!")
+		} else {
+			document.cookie = "return=yes";
+		}
+	</script>
 		
 </head>
 <body>
